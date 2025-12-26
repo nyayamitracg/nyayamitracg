@@ -1,0 +1,112 @@
+/* Custom styles for NyayaMitra.cg - Overrides Bootstrap for warm, trust-building theme */
+/* Fonts: Noto Sans Devanagari for Hindi readability */
+body {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 1.1rem; /* Larger for low-literacy environments */
+    line-height: 1.6;
+    color: #333; /* Earthy brown for text */
+    background-color: #f8f9fa; /* Light neutral background */
+}
+
+/* Header: Green theme */
+header {
+    background-color: #28a745 !important; /* Bootstrap green override */
+}
+
+/* Hero: Deep blue */
+.hero {
+    background-color: #007bff !important; /* Bootstrap blue override */
+}
+
+/* Facts strip: Warm yellow/orange */
+.facts {
+    background-color: #ffc107 !important; /* Bootstrap warning yellow */
+    color: #333;
+}
+
+/* Cards: Subtle borders, hover effects for interactivity */
+.card {
+    border: 2px solid #6c757d; /* Earthy gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+.card-title {
+    color: #28a745; /* Green for headings */
+    font-weight: bold;
+}
+
+/* Buttons: Large and accessible */
+.btn {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+/* Tables: Clean and readable */
+.table {
+    font-size: 1rem;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+}
+
+/* Icons: Use Bootstrap Icons (already included in HTML via CDN) - Ensure large size */
+.bi {
+    font-size: 2rem; /* Large icons for visual appeal */
+}
+
+/* Responsive adjustments for mobile-first design */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem; /* Slightly smaller on small screens */
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Print-friendly styles (A4/booklet style) */
+@media print {
+    body {
+        font-size: 12pt; /* Standard print size */
+        color: black;
+        background: white !important;
+    }
+    header, footer, nav {
+        display: none; /* Hide navigation for printing */
+    }
+    .card, .table {
+        page-break-inside: avoid; /* Keep elements together */
+        border: 1px solid black;
+    }
+    .btn {
+        display: none; /* Hide buttons in print */
+    }
+    /* Ensure Hindi text prints clearly */
+    * {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+}
+
+/* Additional custom classes for visual elements */
+.explanation .card-body {
+    background-color: #e9ecef; /* Light gray for cards */
+}
+
+.facts p {
+    font-weight: bold;
+}
